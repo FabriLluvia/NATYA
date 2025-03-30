@@ -6,6 +6,7 @@ import os
 # Printing title.
 print("Calculator")
 print()
+
 # Declaring menu functions
 
 def show_menu(operations): # Show menu function, used to show all operations based on the dictionary in main_menu function.
@@ -42,7 +43,7 @@ def main_menu(): # Creates a menu, prints it on console, reads the input, checks
 
 if not os.path.exists("calculatorMemory.txt"): # Checks if calculatorMemory.txt exists.
         print("Memory file not found, creating one...") # If it doesn't exist, it creates the file.
-        with open(file_path, "x"):
+        with open("calculatorMemory.txt", "x"):
             pass
 
 def readMemory(): # Opens calculatorMemory.txt and reads it, so the file can be edited later.
